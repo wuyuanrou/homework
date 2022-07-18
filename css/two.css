@@ -1,0 +1,67 @@
+.container{
+    background-color: black;
+
+    padding: 20px;
+
+    display: grid;
+    grid-template-rows: 900px 900px;
+    gap: 20px;
+}
+
+.first-row{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 20px;
+}
+
+.second-row{
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 20px;
+}
+
+.one-div{
+    background-color: gray;
+    font-size: 100px;
+}
+
+.one-div div{
+    margin-top: 50px;
+    margin-left: 50px;
+}
+
+.one-div span{
+    color: red;
+}
+
+.two-div{
+    font-size: 30px;
+
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+}
+
+.two-div div{
+    background-color: gray;
+
+    height: 1fr;
+}
+
+.two-div img{
+    height: 100%;
+    width: 100%;
+}
+
+.two-div p{
+    font-weight: bold;
+    color: white;
+}
+
+.two-div span{
+    color: red;
+}
+
+.two-div-text{
+    margin: 20px;
+}

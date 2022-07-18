@@ -1,0 +1,38 @@
+.container{
+    width: 400px;
+    height: 400px;
+
+    margin: auto;
+}
+
+.card{
+    width: 400px;
+    height: 400px;
+
+    box-shadow: 5px 5px 5px lightgray;
+    border-radius: 10px;
+}
+
+.card:hover{
+    transform: translateY(2px);
+}
+
+.card img{
+    width: 400px;
+    height: 200px;
+    border-radius: 10px 10px 0 0;
+
+}
+
+.letters{
+    width: 350px;
+    height: 150px;
+    font-family: 黑体;
+    color: gray;
+    font-size: 20px;
+    line-height: 30px;
+
+    padding: 20px 0;
+    margin: auto;
+}
+
