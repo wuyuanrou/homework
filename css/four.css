@@ -1,0 +1,62 @@
+.container{
+    height: 1000px;
+}
+
+body{
+    height: 100%;
+    perspective: 5000px;
+    transform-style: preserve-3d;
+}
+
+.photos{
+    position: absolute;
+    left: 50%;
+    animation: rotate 5s linear infinite;
+    transform: translate(-50%, -50%);/*垂直水平居中*/
+    transform-style: preserve-3d;/*使被转换的元素变为3D转换*/
+}
+
+@keyframes rotate {
+    0%{
+        transform: translate(-50%,-50%) rotateY(0deg);
+    }
+    100%{
+        transform: translate(-50%,-50%) rotateY(360deg);
+    }
+}
+img{
+    position: absolute;
+    perspective: 800px;
+}
+
+img:nth-of-type(1){
+    transform: rotateY(45deg) translateZ(450px);
+}
+
+img:nth-of-type(2){
+    transform: rotateY(90deg) translateZ(450px);
+}
+
+img:nth-of-type(3){
+    transform: rotateY(135deg) translateZ(450px);
+}
+
+img:nth-of-type(4){
+    transform: rotateY(180deg) translateZ(450px);
+}
+
+img:nth-of-type(5){
+    transform: rotateY(225deg) translateZ(450px);
+}
+
+img:nth-of-type(6){
+    transform: rotateY(270deg) translateZ(450px);
+}
+
+img:nth-of-type(7){
+    transform: rotateY(315deg) translateZ(450px);
+}
+
+img:nth-of-type(8){
+    transform: rotateY(360deg) translateZ(450px);
+}
