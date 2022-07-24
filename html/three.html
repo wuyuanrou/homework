@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>three</title>
+</head>
+<body>
+<span content="1"></span>
+<span id="day"></span>天<span id="hour"></span>小时<span id="minute"></span>分钟<span id="second"></span>秒
+<script>
+    var set_date=new Date("2022-9-1 00:00");//假设开学时9月1日0时0分，获取设置时间毫秒数
+
+    function get_id(id){
+        return document.getElementById(id);
+    }//拿id
+
+    function add_zero(number){
+        return number<10?"0"+number:number;
+    }//统一格式
+
+    function Duration(){
+        var clear=setInterval(function (){
+            var now=new Date();//获取当前时间毫秒数
+            var sec=(set_date-now)/1000//转化成秒数
+            if(sec>0){
+                get_id("day").innerHTML=add_zero(parseInt(sec/3600/24));//秒转成天数
+                get_id("hour").innerHTML=add_zero(parseInt(sec/3600%24));//秒转成小时数，取余控制在0-24范围内
+                get_id("minute").innerHTML=add_zero(parseInt(sec/60%60));//秒转成分钟数，取余控制在0-60范围内
+                get_id("second").innerHTML=add_zero(parseInt(sec%60));//剩余秒数，取余控制在0-60范围内
+            }else{
+                clearInterval(clear);
+                get_id("day").innerHTML="00";
+                get_id("hour").innerHTML="00";
+                get_id("minute").innerHTML="00";
+                get_id("second").innerHTML="00";
+            }
+        })//setInternal函数隔一段时间重复调用，可以达到更新时间的效果
+    }
+
+    Duration();//运行
+
+</script>
+</body>
+</html>

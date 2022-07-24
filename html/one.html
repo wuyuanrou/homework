@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>one</title>
+    <link rel="stylesheet" href="../css/one.css">
+</head>
+<body>
+<div class="container">
+    <div class="head">
+        My To Do List
+        <div class="add_thing">
+            <input type="text" placeholder="记录一下" id="newThing">
+            <button id="btn" onclick="add()">Add</button>
+        </div>
+    </div>
+    <div class="body">
+        <ul class="things">
+            <li id="banzhuan", onclick="done()">
+                搬砖
+                <button class="delete"></button>
+            </li>
+            <li>
+                玩耍
+                <button class="delete"></button>
+            </li>
+        </ul>
+    </div>
+</div>
+</body>
+<script src="../js/one.js"></script>
+</html>
